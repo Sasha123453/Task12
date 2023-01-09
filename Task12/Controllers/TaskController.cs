@@ -12,6 +12,7 @@ namespace Task12.Controllers
         public IActionResult Sum()
         {
             return View();
+            //
         }
         public IActionResult Change()
         {
