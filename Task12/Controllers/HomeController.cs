@@ -38,9 +38,20 @@ namespace Task12.Controllers
             };
             return vm;
         }
-
-        public IActionResult Index(TaskViewModel vm)
+		public IActionResult Index()
+		{
+			return View();
+		}
+		[HttpPost]
+		public IActionResult ShowChange(string Price, string Paid)
         {
+            TaskViewModel vm = ChangeCount(Price, Paid);
+            return View(vm);
+        }
+		[HttpPost]
+		public IActionResult ShowSum(string Number)
+        {
+            TaskViewModel vm = SumCount(Number);
             return View(vm);
         }
 
